@@ -37,6 +37,7 @@ const std::map<int32_t, TouchscreenGesture::GestureInfo> kGestureInfoMap = {
     {6, {248, "Letter S", "/proc/touchpanel/letter_s_enable"}},
     {7, {246, "Letter W", "/proc/touchpanel/letter_w_enable"}},
     {8, {255, "Single Tap", "/proc/touchpanel/single_tap_enable"}},
+    {9, {143, "Double Tap", "/proc/touchpanel/double_tap_enable"}},
 };
 
 }  // namespace implementation

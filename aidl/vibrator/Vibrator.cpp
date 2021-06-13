@@ -80,7 +80,7 @@ static std::map<Effect, std::vector<std::pair<std::string, std::string>>> LED_EF
         { IGNORE_STORE_PATH, "0" },
         { DURATION_PATH, "8" },
         { VMAX_PATH, "0x1f" },
-        { GAIN_PATH, "0x70" },
+        { GAIN_PATH, "0x80" },
         { SEQ_PATH, "0x00 0x01" },
         { LOOP_PATH, "0x00 0x00" },
         { BRIGHTNESS_PATH, "1" },
@@ -106,7 +106,7 @@ static std::map<Effect, std::vector<std::pair<std::string, std::string>>> LED_EF
         { IGNORE_STORE_PATH, "0" },
         { DURATION_PATH, "5" },
         { VMAX_PATH, "0x1f" },
-        { GAIN_PATH, "0x29" },
+        { GAIN_PATH, "0x40" },
         { SEQ_PATH, "0x00 0x01" },
         { LOOP_PATH, "0x00 0x00" },
         { BRIGHTNESS_PATH, "1" },
@@ -607,10 +607,10 @@ ndk::ScopedAStatus Vibrator::perform(Effect effect, EffectStrength es, const std
                     float gain = 0.0f;
                     switch (es) {
                         case EffectStrength::LIGHT:
-                            gain = 1.0f/3.0f;
+                            gain = 1.0f/2.0f;
                             break;
                         case EffectStrength::MEDIUM:
-                            gain = 2.0f/3.0f;
+                            gain = 3.0f/4.0f;
                             break;
                         case EffectStrength::STRONG:
                             gain = 1.0f;

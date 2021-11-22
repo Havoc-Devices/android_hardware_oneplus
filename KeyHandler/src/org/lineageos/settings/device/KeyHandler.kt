@@ -91,7 +91,8 @@ class KeyHandler : Service() {
     }
 
     private fun handleMode(position: Int) {
-        val muteMedia = sharedPreferences.getBoolean(MUTE_MEDIA_WITH_SILENT, false)
+        val muteMedia = Settings.System.getInt(getContentResolver(),
+                Settings.System.ALERT_SLIDER_MUTE_MEDIA, 0) == 1
 
         val mode = when (position) {
             POSITION_TOP -> sharedPreferences.getString(ALERT_SLIDER_TOP_KEY, "0")!!.toInt()
